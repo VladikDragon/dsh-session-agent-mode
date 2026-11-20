@@ -1,0 +1,55 @@
+{
+  "name": "dsh-session-agent-mode",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Shows which agent preset (mode) each Session runs, as a compact chip in the sidebar Session row next to the update time.",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "scripts": {
+    "test": "node test/client.test.cjs client.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "test"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "sidebar",
+    "sessions",
+    "agent-preset",
+    "web-ui"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladikDragon/dsh-session-agent-mode.git"
+  },
+  "homepage": "https://github.com/VladikDragon/dsh-session-agent-mode#readme",
+  "bugs": {
+    "url": "https://github.com/VladikDragon/dsh-session-agent-mode/issues"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  }
+}

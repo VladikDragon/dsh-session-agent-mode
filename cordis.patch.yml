@@ -1,0 +1,5 @@
+# The agent-mode chip bundle patch: one Loader row whose browser half registers
+# a compact mode label into the Session row's trailing seat.
+- insert:
+    - id: session-agent-mode
+      name: dsh-session-agent-mode
